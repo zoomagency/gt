@@ -1,0 +1,30 @@
+#include <stdio.h>//ham printf
+#include <graphics.h>
+#include <conio.h>//ham getch(), kbhit()
+#include <stdlib.h>//ham random, exit
+#include <dos.h>//ham delay
+
+const CHAM = 10;
+int mx, my;
+void khoitao();
+void vecot();
+
+void main()
+{
+	int dx = 10;
+	khoitao();
+	vecot();
+	while (!kbhit())
+	{
+		setcolor(random(16));
+		circle(mx, my, dx);
+		delay(CHAM);
+		dx = dx + 10;
+	line(mx - 40, 2 *my, mx + 40, 2 *my);
+	floodfill(mx, my + 20, RED);
+}
+	}
+
+	mx = getmaxx() / 2;
+	my = getmaxy() / 2;
+}
